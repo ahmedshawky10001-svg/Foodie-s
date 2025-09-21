@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+}
+
+#home {
+    padding-top: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px 40px;
+    border-radius: 20px;
+    max-width: 1500px;
+}
+
+.logoo {
+    width: 70px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 60px 40px 60px;
+    background-color: #fa7c27;
+    padding: 40px 20px;
+    gap: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.food {
+    background: rgba(0, 0, 0, 0.5);
+    height: 300px;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.food:hover {
+    transform: scale(1.05);
+}
+
+.img-food {
+    width: 200px;
+}
+
+.pp {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ppp {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pppp {
+    color: #ff9800;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.order {
+    background: #fa7c27;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .3s all;
+}
+
+.order:hover {
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #ff9800;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #aaa;
+}
+
+@media(max-width:1200px) {
+    #home {
+        padding-top: 40px;
+    }
+}
+
+@media(max-width:1000px) {
+    nav {
+        margin: 0 40px;
+        padding: 10px 30px;
+    }
+
+    .food {
+        height: 250px;
+        width: 300px;
+    }
+
+    .img-food {
+        width: 150px;
+    }
+
+    .ppp,
+    .pppp {
+        font-size: 90%;
+        font-weight: 400;
+    }
+}
+
+@media(max-width:768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;     /* nav {position: relative;} */
+        top: 50px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav {
+        position: relative;
+        padding: 7px 30px;
+    }
+
+    .menu-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .food {
+        height: 70%;
+        width: 80%;
+    }
+    .logoo {
+    width: 40px;
+}
+}

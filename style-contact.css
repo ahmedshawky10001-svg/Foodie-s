@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+}
+
+#home {
+    padding-top: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px 40px;
+    border-radius: 20px;
+    max-width: 1500px;
+}
+
+.logoo {
+    width: 70px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+.contaner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #ff9800;
+    letter-spacing: 3px;
+}
+
+.three-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.small-box {
+    width: 250px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+
+}
+
+h3 {
+    color: #ff9800;
+}
+
+p,
+p a {
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.contact-container {
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    height: 40px;
+    width: 750px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: orange;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e69500;
+}
+
+iframe {
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 800px;
+    height: 300px;
+    border:0;
+}
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #ff9800;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #aaa;
+}
+
+@media(max-width:1200px) {
+    #home {
+        padding-top: 40px;
+    }
+}
+
+@media(max-width:1000px) {
+    nav {
+        margin: 0 40px;
+        padding: 10px 30px;
+    }
+
+    .three-box {
+        flex-wrap: wrap;
+    }
+
+    .contact-container {
+        width: 80%;
+    }
+
+    .contact-form input {
+
+        width: 100%;
+    }
+
+    iframe {
+        width: 80%;
+    }
+}
+
+@media(max-width:768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;     /* nav {position: relative;} */
+        top: 50px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav {
+        position: relative;
+        padding: 7px 30px;
+    }
+
+    .menu-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .logoo {
+        width: 40px;
+    }
+
+}
