@@ -94,10 +94,10 @@ nav a:hover {
         position: fixed;
         top: 0;
         flex-direction: column;
-        width: 400px;
+        width: 350px;
         background-color: #000000;
         height: 100vh;
-        left: -400px;
+        left: -350px;
         padding: 50px 0;
         text-align: center;
         transition: .3s;
