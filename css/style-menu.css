@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 60px 40px 60px;
+    background-color: #fa7c27;
+    padding: 40px 20px;
+    gap: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.food {
+    background: rgba(0, 0, 0, 0.5);
+    height: 300px;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.food:hover {
+    transform: scale(1.05);
+}
+
+.img-food {
+    width: 200px;
+}
+
+.food-info {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.food-name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.food-price {
+    color: #ff9800;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.order {
+    background: #fa7c27;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .3s all;
+}
+
+.order:hover {
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media(max-width:1000px) {
+    .food {
+        height: 250px;
+        width: 300px;
+    }
+
+    .img-food {
+        width: 150px;
+    }
+
+    .food-name,
+    .food-price {
+        font-size: 90%;
+        font-weight: 400;
+    }
+}
+
+@media(max-width:768px) {
+    .menu-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .food {
+        height: 70%;
+        width: 80%;
+    }
+}

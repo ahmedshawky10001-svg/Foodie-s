@@ -1,0 +1,170 @@
+header {
+    padding-top: 15px;
+    height: auto;
+    min-height: 70px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 25px;
+    border-radius: 20px;
+    max-width: 1500px;
+}
+
+.nav-logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.links {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all .3s;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ff9800;
+    scale: 1.2;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons a {
+    color: white;
+    font-size: 22px;
+}
+
+.logo-link {
+    display: none;
+}
+
+.icon_menu {
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    display: none;
+}
+
+.close_menu {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding-top: 10px;
+        min-height: 60px;
+    }
+
+    nav {
+        padding: 8px 20px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .icons a {
+        font-size: 18px;
+    }
+
+    header nav .links {
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        width: 400px;
+        background-color: #000000;
+        height: 100vh;
+        left: -400px;
+        padding: 50px 0;
+        text-align: center;
+        transition: .3s;
+    }
+
+    .close_menu {
+        display: block;
+        font-size: 28px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    header nav .links.Acteve {
+        left: 0;
+    }
+
+    .links .logo-1 {
+        display: inline-block;
+    }
+
+    .icon_menu {
+        display: block;
+        font-size: 22px;
+    }
+
+    nav .links a:hover {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ff9800;
+        scale: 1;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .logo-link {
+        display: block;
+    }
+
+    .logo-link:hover {
+        border: 1px solid transparent !important;
+        color: unset !important;
+        scale: 1 !important;
+        background: none !important;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        padding-top: 8px;
+        min-height: 55px;
+    }
+
+    nav {
+        padding: 6px 15px;
+        border-radius: 15px;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+    }
+
+    .icons a {
+        font-size: 16px;
+    }
+
+    .icon_menu {
+        font-size: 18px;
+    }
+}
